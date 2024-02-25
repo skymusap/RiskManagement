@@ -52,6 +52,21 @@
       "options": {
         "cwd": "${workspaceFolder}/"
       }
+    },
+    {
+      "label": "PreLaunchTask for Run RiskManagement with Live Data",
+      "type": "process",
+      "command": "basctl",
+      "args": [
+        "--command",
+        "PT.runner.generateLaunchPage"
+      ],
+      "dependsOn": [
+        "BuildMDK"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
     }
   ]
 }

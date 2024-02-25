@@ -124,5 +124,5 @@ annotate service.Risks with @(
     ]
 );
 annotate service.Risks with {
-    supplier @Common.ValueListWithFixedValues : true
+    supplier @Common.ValueListWithFixedValues : false
 };
