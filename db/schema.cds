@@ -1,5 +1,7 @@
 namespace RiskManagement;
 
+using { BusinessPartnerA2X } from '../srv/external/BusinessPartnerA2X.cds';
+
 using
 {
     Country,
@@ -22,6 +24,7 @@ entity Risks : managed
     impact : Integer;
     crtiticality : Integer;
     miti : Association to one Mitigations on miti.risks = $self;
+    supplier : Association to one BusinessPartnerA2X.A_BusinessPartner;
 }
 
 entity Mitigations : managed
