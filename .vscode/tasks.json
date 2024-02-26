@@ -13,6 +13,21 @@
       "enableDiscovery": "true"
     },
     {
+      "label": "PreLaunchTask for Run RiskManagement with Live Data",
+      "type": "process",
+      "command": "basctl",
+      "args": [
+        "--command",
+        "PT.runner.generateLaunchPage"
+      ],
+      "dependsOn": [
+        "BuildMDK"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
       "label": "npm-install",
       "type": "process",
       "command": "npm",
@@ -20,7 +35,7 @@
         "install"
       ],
       "options": {
-        "cwd": "${workspaceFolder}/"
+        "cwd": "${workspaceFolder}"
       }
     },
     {
@@ -39,28 +54,13 @@
         "npm-install"
       ],
       "options": {
-        "cwd": "${workspaceFolder}/"
+        "cwd": "${workspaceFolder}"
       }
     },
     {
       "label": "dev-project",
       "type": "shell",
       "command": "basctl --command PT.runner.generateLaunchPage",
-      "dependsOn": [
-        "BuildMDK"
-      ],
-      "options": {
-        "cwd": "${workspaceFolder}/"
-      }
-    },
-    {
-      "label": "PreLaunchTask for Run RiskManagement with Live Data",
-      "type": "process",
-      "command": "basctl",
-      "args": [
-        "--command",
-        "PT.runner.generateLaunchPage"
-      ],
       "dependsOn": [
         "BuildMDK"
       ],
