@@ -1,0 +1,77 @@
+{
+	"Caption": "Update A_BusinessPartner Detail",
+	"DesignTimeTarget": {
+		"Service": "/RisksMobile/Services/service1.service",
+		"EntitySet": "A_BusinessPartner",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"Caption": "Cancel",
+				"OnPress": "/RisksMobile/Rules/A_BusinessPartner/A_BusinessPartner_Cancel.js"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/RisksMobile/Rules/A_BusinessPartner/A_BusinessPartner_UpdateEntity.js"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Visible": true,
+					"Controls": [
+						{
+							"Caption": "BusinessPartner",
+							"_Name": "BusinessPartner",
+							"Value": "{BusinessPartner}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"IsEditable": false
+						},
+						{
+							"Caption": "Customer",
+							"_Name": "Customer",
+							"Value": "{Customer}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Supplier",
+							"_Name": "Supplier",
+							"Value": "{Supplier}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "BusinessPartnerCategory",
+							"_Name": "BusinessPartnerCategory",
+							"Value": "{BusinessPartnerCategory}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "BusinessPartnerFullName",
+							"_Name": "BusinessPartnerFullName",
+							"Value": "{BusinessPartnerFullName}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"_Name": "BusinessPartnerIsBlocked",
+							"Caption": "BusinessPartnerIsBlocked",
+							"Value": "{BusinessPartnerIsBlocked}",
+							"_Type": "Control.Type.FormCell.Switch"
+						}
+					]
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_BusinessPartner_Edit",
+	"PrefersLargeCaption": true
+}

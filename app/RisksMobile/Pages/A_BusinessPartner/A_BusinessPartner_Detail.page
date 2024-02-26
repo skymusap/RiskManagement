@@ -1,0 +1,84 @@
+{
+	"Caption": "A_BusinessPartner Detail",
+	"DesignTimeTarget": {
+		"Service": "/RisksMobile/Services/service1.service",
+		"EntitySet": "A_BusinessPartner",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/RisksMobile/Rules/A_BusinessPartner/NavToA_BusinessPartner_Edit.js",
+				"Position": "Right",
+				"SystemItem": "Edit"
+			},
+			{
+				"OnPress": "/RisksMobile/Rules/A_BusinessPartner/A_BusinessPartner_DeleteConfirmation.js",
+				"Position": "Right",
+				"SystemItem": "Trash"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Tags": [],
+						"DetailImage": "",
+						"HeadlineText": "{BusinessPartnerFullName}",
+						"Subhead": "{BusinessPartner}",
+						"BodyText": "",
+						"Footnote": "{Supplier}",
+						"Description": "{Customer}",
+						"StatusText": "{BusinessPartnerCategory}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{BusinessPartnerIsBlocked}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "BusinessPartner",
+							"Value": "{BusinessPartner}"
+						},
+						{
+							"KeyName": "Customer",
+							"Value": "{Customer}"
+						},
+						{
+							"KeyName": "Supplier",
+							"Value": "{Supplier}"
+						},
+						{
+							"KeyName": "BusinessPartnerCategory",
+							"Value": "{BusinessPartnerCategory}"
+						},
+						{
+							"KeyName": "BusinessPartnerFullName",
+							"Value": "{BusinessPartnerFullName}"
+						},
+						{
+							"KeyName": "BusinessPartnerIsBlocked",
+							"Value": "{BusinessPartnerIsBlocked}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_BusinessPartner_Detail",
+	"PrefersLargeCaption": true
+}

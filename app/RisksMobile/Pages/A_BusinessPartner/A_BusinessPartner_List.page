@@ -1,0 +1,73 @@
+{
+	"Caption": "A_BusinessPartner",
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/RisksMobile/Actions/A_BusinessPartner/NavToA_BusinessPartner_Create.action",
+				"Position": "Right",
+				"SystemItem": "Add"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Header": {
+						"UseTopPadding": false
+					},
+					"ObjectCell": {
+						"AccessoryType": "DisclosureIndicator",
+						"Description": "{Customer}",
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"Icons": [],
+						"OnPress": "/RisksMobile/Actions/A_BusinessPartner/NavToA_BusinessPartner_Detail.action",
+						"StatusImage": "",
+						"Title": "{BusinessPartnerFullName}",
+						"Footnote": "{Supplier}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{BusinessPartnerCategory}",
+						"Subhead": "{BusinessPartner}",
+						"SubstatusText": "{BusinessPartnerIsBlocked}"
+					},
+					"EmptySection": {
+						"Caption": "No record found!"
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Item Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait..."
+					},
+					"Target": {
+						"EntitySet": "A_BusinessPartner",
+						"Service": "/RisksMobile/Services/service1.service",
+						"QueryOptions": ""
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_BusinessPartner_List",
+	"PrefersLargeCaption": true
+}

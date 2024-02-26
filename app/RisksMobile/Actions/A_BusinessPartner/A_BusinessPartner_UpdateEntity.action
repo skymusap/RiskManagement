@@ -1,0 +1,22 @@
+{
+    "_Type": "Action.Type.ODataService.UpdateEntity",
+    "Target": {
+        "EntitySet": "A_BusinessPartner",
+        "Service": "/RisksMobile/Services/service1.service",
+        "ReadLink": "{@odata.readLink}"
+    },
+    "Properties": {
+        "BusinessPartner": "#Control:BusinessPartner/#Value",
+        "Customer": "#Control:Customer/#Value",
+        "Supplier": "#Control:Supplier/#Value",
+        "BusinessPartnerCategory": "#Control:BusinessPartnerCategory/#Value",
+        "BusinessPartnerFullName": "#Control:BusinessPartnerFullName/#Value",
+        "BusinessPartnerIsBlocked": "#Control:BusinessPartnerIsBlocked/#Value"
+    },
+    "UpdateLinks": [],
+    "ActionResult": {
+        "_Name": "update"
+    },
+    "OnSuccess": "/RisksMobile/Actions/UpdateEntitySuccessMessage.action",
+    "OnFailure": "/RisksMobile/Actions/UpdateEntityFailureMessage.action"
+}
